@@ -3,21 +3,39 @@
 import Link from "next/link";
 import { marketingNavLinks } from "@/lib/constants/nav-links";
 import { Button } from "@/components/ui/Button";
+import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 
 export function MarketingNavbar() {
-  const [sticky, setSticky] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [showCtaBar, setShowCtaBar] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setSticky(window.scrollY > 620);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 8);
+      setShowCtaBar(window.scrollY > 620);
+    };
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <>
-      <div className="border-b border-[#EDE7D8]/[.07] bg-[#0A100E]/90 backdrop-blur">
-        <div className="mx-auto flex max-w-[1180px] items-center justify-between px-8 py-[18px]">
+      <div
+        className={cn(
+          "sticky top-0 z-50 border-b backdrop-blur transition-[background-color,border-color,box-shadow,padding] duration-300",
+          scrolled
+            ? "border-[#EDE7D8]/[.09] bg-[#0A100E]/95 shadow-lg shadow-black/30"
+            : "border-[#EDE7D8]/[.07] bg-[#0A100E]/90"
+        )}
+      >
+        <div
+          className={cn(
+            "mx-auto flex max-w-[1180px] items-center justify-between px-8 transition-[padding] duration-300",
+            scrolled ? "py-3" : "py-[18px]"
+          )}
+        >
           <Link href="/" className="flex items-center gap-3">
             <div className="flex h-[30px] w-[30px] rotate-45 items-center justify-center border-[1.5px] border-[#CBA55C]">
               <div className="h-3 w-3 -rotate-45 bg-[#CBA55C]/50" />
@@ -49,7 +67,7 @@ export function MarketingNavbar() {
         </div>
       </div>
 
-      {sticky && (
+      {showCtaBar && (
         <div className="fixed inset-x-0 bottom-0 z-[60] border-t border-[#CBA55C]/30 bg-[#0A100E]/92 backdrop-blur">
           <div className="mx-auto flex max-w-[1180px] items-center justify-between gap-4 px-8 py-2.5">
             <div className="text-[13.5px] text-[#9FAAA3]">
