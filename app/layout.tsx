@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s · The Digital Riwaq",
   },
   description:
-    "Learn the art of Quran recitation from a master Qari: Tajweed, voice training, Maqamat, and the path to ijazah — with an AI coach for the repetitions in between.",
+    "Learn the art of Quran recitation from a master Qari: Tajweed, voice training, Maqamat, and the path to ijazah - with an AI coach for the repetitions in between.",
 };
 
 export default function RootLayout({
