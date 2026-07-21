@@ -18,7 +18,7 @@ function ProgressRing({ pct, color }: { pct: number; color: string }) {
 export function MyCourses() {
   return (
     <div className="mx-auto w-full max-w-6xl px-6 py-8 text-[#EDE7D8] md:px-10 md:py-10">
-      <div className="mb-5 flex gap-5 max-lg:flex-col">
+      <div className="mb-5 flex flex-col gap-5 lg:flex-row">
         <div className="flex flex-[1.5] items-center gap-5.5 rounded-2xl border border-gold/25 bg-[#131D19] px-6 py-5.5">
           <div className="min-w-0 flex-1">
             <div className="mb-1.5 text-[11px] tracking-[0.12em] text-gold uppercase">Continue where you left off</div>
@@ -65,7 +65,7 @@ export function MyCourses() {
         </div>
       </div>
 
-      <div className="mb-5 flex gap-5 max-lg:flex-col">
+      <div className="mb-5 flex flex-col gap-5 lg:flex-row">
         <div className="flex flex-1 items-center gap-4.5 rounded-2xl border border-[#EDE7D8]/[.08] bg-[#0D1512] px-5.5 py-5">
           <ProgressRing pct={52} color="#52B3A4" />
           <div className="min-w-0">
@@ -95,10 +95,10 @@ export function MyCourses() {
         </div>
       </div>
 
-      <div className="flex gap-5 max-lg:flex-col">
+      <div className="flex flex-col gap-5 lg:flex-row">
         <div className="flex flex-1 items-center gap-3.5 rounded-2xl border border-teal/25 bg-teal/5 px-5 py-3.5">
           <div className="h-[7px] w-[7px] flex-none rotate-45 bg-teal" />
-          <div className="text-[13.5px] text-[#B9C2BB]">
+          <div className="min-w-0 flex-1 text-[13.5px] text-[#B9C2BB]">
             <span className="font-bold text-teal">Live tonight 21:00</span> — Maqam Circle with your teacher · seat reserved
           </div>
           <button className="ml-auto h-9 flex-none rounded-[10px] border border-teal/40 px-4 text-[12.5px] font-bold text-teal">
@@ -107,7 +107,7 @@ export function MyCourses() {
         </div>
         <div className="flex flex-1 items-center gap-3.5 rounded-2xl border border-gold/30 bg-gold/[.06] px-5 py-3.5">
           <div className="h-[7px] w-[7px] flex-none animate-[rw-glow_2.4s_ease-in-out_infinite] rotate-45 bg-gold" />
-          <div className="text-[13.5px] text-[#B9C2BB]">
+          <div className="min-w-0 flex-1 text-[13.5px] text-[#B9C2BB]">
             <span className="font-bold text-gold-bright">Your teacher reviewed your Fatiha</span> — 3 notes on your recording
           </div>
           <Link href="/assignments/module-2-capstone" className="ml-auto h-9 flex-none rounded-[10px] border border-gold/45 bg-gold/10 px-4 text-[12.5px] leading-9 font-bold text-gold-bright">

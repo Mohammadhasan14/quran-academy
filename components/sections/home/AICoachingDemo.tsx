@@ -17,20 +17,20 @@ export function AICoachingDemo() {
 
   return (
     <div className="border-t border-[#20241F]/[.06] bg-[#EEE7D6] text-[#20241F]">
-      <div className="mx-auto max-w-[1180px] px-8 py-[76px]">
-        <div className="mb-2 flex items-baseline gap-3.5">
-          <h2 className="m-0 text-4xl font-extrabold tracking-[-0.01em]">An honest coach between lessons.</h2>
+      <div className="mx-auto max-w-[1180px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-[76px]">
+        <div className="mb-2 flex flex-wrap items-baseline gap-x-3.5 gap-y-2">
+          <h2 className="m-0 text-[28px] font-extrabold tracking-[-0.01em] sm:text-4xl">An honest coach between lessons.</h2>
           <span className="rounded-full border border-[#D99A3D]/40 bg-[#D99A3D]/[.18] px-2.5 py-1 text-[11px] font-bold tracking-[0.12em] text-[#8B6A1F] uppercase">
             Staged sample
           </span>
         </div>
-        <p className="mb-8 max-w-[640px] text-[16.5px] leading-[1.55] text-[#5A6159]">
+        <p className="mb-8 max-w-[640px] text-[15px] leading-[1.55] text-[#5A6159] sm:text-[16.5px]">
           After each practice, the AI marks what it heard — in amber, never red, always with its confidence stated.
           It never judges beauty; that belongs to your teacher. Tap a marker.
         </p>
 
         <div
-          className="rounded-[18px] border border-[#A8853E]/25 bg-[#FDFBF4] px-[30px] py-[26px]"
+          className="rounded-[18px] border border-[#A8853E]/25 bg-[#FDFBF4] px-5 py-5 sm:px-[30px] sm:py-[26px]"
           style={{ boxShadow: "0 2px 12px rgba(32,36,31,.06)" }}
         >
           <div className="mb-3 text-[13px] text-[#5A6159]">
@@ -64,7 +64,7 @@ export function AICoachingDemo() {
             <span>1:22</span>
           </div>
 
-          <div className="flex items-start gap-6 max-md:flex-col">
+          <div className="flex flex-col items-start gap-6 md:flex-row">
             <div className="flex-[1.2]">
               <div
                 className="mb-3 inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-bold"

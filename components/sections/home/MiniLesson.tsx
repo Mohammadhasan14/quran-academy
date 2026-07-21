@@ -9,16 +9,16 @@ export function MiniLesson() {
 
   return (
     <div className="bg-[#F6F1E5] text-[#20241F]">
-      <div className="mx-auto max-w-[1180px] px-8 py-[76px]">
-        <div className="flex items-start gap-14 max-lg:flex-col">
-          <div className="flex-[0.8]">
+      <div className="mx-auto max-w-[1180px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-[76px]">
+        <div className="flex flex-col items-start gap-10 lg:flex-row lg:gap-14">
+          <div className="w-full flex-[0.8]">
             <div className="mb-2.5 text-xs tracking-[0.16em] text-[#A8853E] uppercase">
               Try a lesson — 3 minutes, as a guest
             </div>
-            <h2 className="m-0 mb-2 text-4xl font-extrabold tracking-[-0.01em] text-[#20241F]">
+            <h2 className="m-0 mb-2 text-[28px] font-extrabold tracking-[-0.01em] text-[#20241F] sm:text-4xl">
               The Ghunnah: the hum inside the letters.
             </h2>
-            <p className="m-0 text-balance text-[16.5px] leading-[1.55] text-[#5A6159]">
+            <p className="m-0 text-balance text-[15px] leading-[1.55] text-[#5A6159] sm:text-[16.5px]">
               A complete micro-lesson from Tajweed Foundations, exactly as students experience it: concept,
               listening, your own attempt, and a gentle result. Nothing to install, no account.
             </p>
@@ -39,7 +39,7 @@ export function MiniLesson() {
           </div>
 
           <div
-            className="min-h-[340px] flex-[1.1] rounded-[18px] border border-[#A8853E]/25 bg-[#FDFBF4] px-8 py-[30px]"
+            className="min-h-[340px] w-full flex-[1.1] rounded-[18px] border border-[#A8853E]/25 bg-[#FDFBF4] px-5 py-6 sm:px-8 sm:py-[30px]"
             style={{ boxShadow: "0 2px 12px rgba(32,36,31,.06)" }}
           >
             {step === 0 && (
@@ -88,7 +88,7 @@ export function MiniLesson() {
                 <div className="mb-4 text-sm leading-[1.55] text-[#5A6159]">
                   Listen twice. Notice the hum has a <em>duration</em> — it is not brushed past.
                 </div>
-                <div className="flex gap-2.5">
+                <div className="flex flex-wrap gap-2.5">
                   <button
                     onClick={() => setStep(0)}
                     className="h-[46px] cursor-pointer rounded-xl border border-[#20241F]/[.18] bg-transparent px-4.5 text-sm font-medium text-[#33403B]"
@@ -149,7 +149,7 @@ export function MiniLesson() {
                   That&apos;s the whole method in miniature: hear → try → be told the truth, gently → try again.
                   Imagine it across 200 lessons, with a real Qari confirming your mastery.
                 </div>
-                <div className="flex gap-2.5">
+                <div className="flex flex-col gap-2.5 sm:flex-row">
                   <button
                     className="h-12 cursor-pointer rounded-xl border-none px-6.5 text-[15px] font-bold text-[#20241F]"
                     style={{ background: "linear-gradient(160deg,#D9B96E,#B98F45)" }}

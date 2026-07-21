@@ -33,8 +33,8 @@ const STEPS = [
 
 export function HowItWorks() {
   return (
-    <div className="mx-auto max-w-[1180px] px-8 pb-[60px]">
-      <div className="flex items-stretch gap-3.5 max-lg:flex-col">
+    <div className="mx-auto max-w-[1180px] px-4 pb-10 sm:px-6 sm:pb-12 lg:px-8 lg:pb-[60px]">
+      <div className="flex flex-col items-stretch gap-3.5 lg:flex-row">
         {STEPS.map((step, i) => (
           <div
             key={step.title}

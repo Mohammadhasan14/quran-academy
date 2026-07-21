@@ -11,9 +11,9 @@ function TemplateSlot({ children }: { children: React.ReactNode }) {
 export function MeetYourTeacher() {
   return (
     <div id="teacher" className="border-t border-[#20241F]/[.06] bg-[#FDFBF4] text-[#20241F]">
-      <div className="mx-auto flex max-w-[1180px] items-center gap-14 px-8 py-[76px] max-lg:flex-col">
+      <div className="mx-auto flex max-w-[1180px] flex-col gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:flex-row lg:items-center lg:gap-14 lg:px-8 lg:py-[76px]">
         <div className="flex min-w-0 flex-[0.75] flex-col gap-4">
-          <div className="h-[380px] w-full">
+          <div className="h-[260px] w-full sm:h-[320px] lg:h-[380px]">
             <ImagePlaceholder label="PORTRAIT SLOT — shoot: natural light, eye-level, warm neutral background, looking at camera" />
           </div>
           <div className="relative h-[150px] w-full">
@@ -67,21 +67,21 @@ export function MeetYourTeacher() {
           </div>
           <div className="mb-[22px] rounded-2xl border border-[#A8853E]/30 bg-[#A8853E]/5 px-4.5 py-4">
             <div className="mb-3.5 text-[11px] tracking-[0.12em] text-[#A8853E] uppercase">The chain of teachers</div>
-            <div className="flex items-center gap-2.5">
+            <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-3 sm:flex-nowrap sm:justify-normal sm:gap-2.5">
               <div className="text-center">
                 <div className="mx-auto mb-1.5 h-[9px] w-[9px] rotate-45 bg-[#A8853E]" />
                 <div className="text-[11.5px] whitespace-nowrap text-[#33403B]">The Prophet ﷺ</div>
               </div>
-              <div className="h-px flex-1 bg-[#A8853E]/45" />
+              <div className="hidden h-px flex-1 bg-[#A8853E]/45 sm:block" />
               <div className="text-[13px] text-[#8B8778]">···</div>
-              <div className="h-px flex-1 bg-[#A8853E]/45" />
+              <div className="hidden h-px flex-1 bg-[#A8853E]/45 sm:block" />
               <div className="text-center">
                 <div className="mx-auto mb-1.5 h-[9px] w-[9px] rotate-45 border border-[#A8853E]" />
                 <div className="font-mono text-[10.5px] font-bold whitespace-nowrap text-[#8B6A1F]">
                   [TEACHER&apos;S SHAYKH]
                 </div>
               </div>
-              <div className="h-px flex-1 bg-[#A8853E]/45" />
+              <div className="hidden h-px flex-1 bg-[#A8853E]/45 sm:block" />
               <div className="text-center">
                 <div
                   className="mx-auto mb-1.5 h-[11px] w-[11px] rotate-45"

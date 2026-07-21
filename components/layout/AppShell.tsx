@@ -41,7 +41,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         })}
       </nav>
 
-      <div className="flex flex-1 flex-col pb-[76px] md:pb-0">
+      <div className="min-w-0 flex flex-1 flex-col pb-[76px] md:pb-0">
         {children}
       </div>
 
@@ -53,7 +53,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               key={item.href}
               href={item.href}
               className={cn(
-                "flex min-w-12 flex-col items-center gap-[3px] text-[11.5px]",
+                "flex min-w-12 flex-col items-center gap-[3px] py-1.5 text-[11.5px]",
                 active ? "text-gold" : "text-text-muted",
               )}
             >

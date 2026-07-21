@@ -16,20 +16,20 @@ const COMMUNITY = [
 export function LiveClasses() {
   return (
     <div id="live" className="border-t border-gold/[.18] bg-[#0A100E]">
-      <div className="mx-auto max-w-[1180px] px-8 py-[76px]">
+      <div className="mx-auto max-w-[1180px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-[76px]">
         <div className="mb-2.5 text-xs tracking-[0.16em] text-gold uppercase">Live teaching · every week</div>
-        <h2 className="m-0 mb-2 text-4xl font-extrabold tracking-[-0.01em] text-[#EDE7D8]">
+        <h2 className="m-0 mb-2 text-[28px] font-extrabold tracking-[-0.01em] text-[#EDE7D8] sm:text-4xl">
           You will recite — and the teacher will hear you.
         </h2>
-        <p className="mb-8 max-w-[600px] text-[16.5px] leading-[1.55] text-[#9FAAA3]">
+        <p className="mb-8 max-w-[600px] text-[15px] leading-[1.55] text-[#9FAAA3] sm:text-[16.5px]">
           Classes are small and participatory: the Qari teaches, hands go up, and one by one the whole class listens
           as he corrects — gently, in real time.
         </p>
 
-        <div className="flex items-stretch gap-6 max-lg:flex-col">
-          <div className="flex flex-[1.5] gap-3.5 rounded-[18px] border border-gold/[.22] bg-[#0D1512] p-4.5 max-md:flex-col">
+        <div className="flex flex-col items-stretch gap-6 lg:flex-row">
+          <div className="flex flex-col flex-[1.5] gap-3.5 rounded-[18px] border border-gold/[.22] bg-[#0D1512] p-4.5 md:flex-row">
             <div className="relative min-w-0 flex-[1.4]">
-              <div className="h-[300px] w-full">
+              <div className="h-[220px] w-full sm:h-[300px]">
                 <ImagePlaceholder label="Teacher on camera — the live class stage" />
               </div>
               <div className="absolute top-3 left-3 flex items-center gap-1.5 rounded-full bg-[#0A100E]/82 px-3 py-1.5 text-[11px] font-bold text-[#EDE7D8]">
@@ -101,9 +101,9 @@ export function LiveClasses() {
           </div>
         </div>
 
-        <div className="mt-14 grid grid-cols-3 gap-5 max-lg:grid-cols-1">
+        <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3">
           {COMMUNITY.map((c) => (
-            <div key={c.title} className="rounded-2xl border border-[#EDE7D8]/[.09] bg-[#0D1512] px-6 py-[22px]">
+            <div key={c.title} className="rounded-2xl border border-[#EDE7D8]/[.09] bg-[#0D1512] px-5 py-4 sm:px-6 sm:py-[22px]">
               <div className="mb-3.5 h-2 w-2 rotate-45 bg-gold/60" />
               <div className="mb-1 text-[16.5px] font-extrabold text-[#EDE7D8]">{c.title}</div>
               <div className="text-[13.5px] leading-[1.55] text-[#9FAAA3]">{c.body}</div>

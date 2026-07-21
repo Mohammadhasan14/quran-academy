@@ -13,14 +13,14 @@ export function TajweedWordExplorer() {
 
   return (
     <div className="border-y border-[#EDE7D8]/[.06] bg-[#0D1512]">
-      <div className="mx-auto max-w-[1180px] px-8 py-[76px]">
+      <div className="mx-auto max-w-[1180px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-[76px]">
         <div className="mb-2.5 text-xs tracking-[0.16em] text-gold uppercase">Open classroom · Tajweed, made visible</div>
-        <h2 className="m-0 mb-2 text-4xl font-extrabold tracking-[-0.01em]">One word can carry three rules.</h2>
-        <p className="mb-[26px] max-w-[560px] text-[16.5px] leading-[1.55] text-[#9FAAA3]">
+        <h2 className="m-0 mb-2 text-[28px] font-extrabold tracking-[-0.01em] sm:text-4xl">One word can carry three rules.</h2>
+        <p className="mb-[26px] max-w-[560px] text-[15px] leading-[1.55] text-[#9FAAA3] sm:text-[16.5px]">
           Pick a word. Every rule it carries lights up with its own pattern — and a plain-English reason why.
         </p>
 
-        <div className="mb-[26px] flex gap-2.5">
+        <div className="mb-[26px] flex flex-wrap gap-2.5">
           {TAJWEED_WORDS.map((w, i) => {
             const selected = i === word;
             return (
@@ -43,9 +43,9 @@ export function TajweedWordExplorer() {
           })}
         </div>
 
-        <div className="flex items-stretch gap-7 max-lg:flex-col">
-          <div className="flex flex-1 flex-col items-center justify-center rounded-[18px] border border-gold/[.22] bg-[#0A100E] px-[30px] py-[34px] text-center">
-            <div dir="rtl" className="font-arabic-quran pb-[30px] text-6xl leading-[1.6] text-[#EDE7D8]">
+        <div className="flex flex-col items-stretch gap-5 lg:flex-row lg:gap-7">
+          <div className="flex w-full flex-1 flex-col items-center justify-center rounded-[18px] border border-gold/[.22] bg-[#0A100E] px-6 py-7 text-center sm:px-[30px] sm:py-[34px]">
+            <div dir="rtl" className="font-arabic-quran pb-[30px] text-5xl leading-[1.6] text-[#EDE7D8] sm:text-6xl">
               {selW.ar}
             </div>
             <div className="text-sm text-[#9FAAA3]">{selW.gloss}</div>

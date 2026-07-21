@@ -40,8 +40,8 @@ export function SettingsPage() {
   const isDark = mounted && resolvedTheme === "dark";
 
   return (
-    <div className="mx-auto flex w-full max-w-6xl gap-0 text-text md:px-6 md:py-8">
-      <nav className="w-[230px] flex-none border-r border-text/[.08] px-4 py-6">
+    <div className="mx-auto flex w-full max-w-6xl flex-col gap-0 text-text md:flex-row md:px-6 md:py-8">
+      <nav className="hidden w-[230px] flex-none border-r border-text/[.08] px-4 py-6 md:block">
         <div className="mb-3 px-2.5 text-[11px] tracking-[0.13em] text-text-muted uppercase">Settings</div>
         <div className="flex flex-col gap-0.5">
           {SETTINGS_NAV.map((name, i) => (
@@ -60,6 +60,25 @@ export function SettingsPage() {
           ))}
         </div>
       </nav>
+
+      <div role="tablist" aria-label="Settings sections" className="flex flex-none gap-2 overflow-x-auto px-4 pt-4 pb-1 md:hidden">
+        {SETTINGS_NAV.map((name, i) => (
+          <button
+            key={name}
+            role="tab"
+            aria-selected={i === section}
+            onClick={() => setSection(i)}
+            className="flex-none rounded-full border px-3.5 py-2 text-[13px] font-bold whitespace-nowrap focus-visible:outline-2 focus-visible:outline-teal"
+            style={{
+              borderColor: i === section ? "rgba(203,165,92,.45)" : "rgba(237,231,216,.14)",
+              background: i === section ? "rgba(203,165,92,.08)" : "transparent",
+              color: i === section ? "var(--color-gold-bright)" : "var(--color-text-muted)",
+            }}
+          >
+            {name}
+          </button>
+        ))}
+      </div>
 
       <div className="min-w-0 flex-1 px-6 py-6 md:px-7.5">
         {section === 0 && (
@@ -80,7 +99,7 @@ export function SettingsPage() {
                 <div className="text-[14.5px] font-extrabold text-gold-bright">Premium · $12/month</div>
                 <div className="mt-0.5 text-[12.5px] text-text-muted">Renews 3 August 2026 · Visa ···4821</div>
               </div>
-              <div className="flex gap-2.5">
+              <div className="flex flex-wrap gap-2.5">
                 <button className="h-10 rounded-[10px] border border-text/[.14] px-4 text-[13px] font-bold text-text">Change plan</button>
                 <button className="h-10 rounded-[10px] border border-text/[.14] px-4 text-[13px] font-bold text-text">Update payment</button>
                 <button className="h-10 rounded-[10px] border border-[#B4573F]/40 px-4 text-[13px] font-bold text-[#D8A79A]">Cancel subscription</button>
@@ -154,7 +173,7 @@ export function SettingsPage() {
                   <div className="text-[13.5px] font-bold">Tajweed Foundations I</div>
                   <span className="text-xs text-teal">downloaded · 180 MB</span>
                 </div>
-                <div className="flex gap-2">
+                <div className="flex flex-wrap gap-2">
                   <button className="h-8 rounded-lg border border-text/[.14] px-3 text-[11.5px] font-bold text-text-muted">Remove</button>
                   <button className="h-8 rounded-lg border border-text/[.14] px-3 text-[11.5px] font-bold text-text-muted">Audio only (44 MB)</button>
                 </div>
@@ -189,7 +208,7 @@ export function SettingsPage() {
             <div className="mb-4.5 max-w-[560px] text-[13px] leading-[1.6] text-text-muted">
               Everything about your data, in one honest place — written in plain language, not legalese.
             </div>
-            <div className="flex gap-4 max-lg:flex-col">
+            <div className="flex flex-col gap-4 lg:flex-row">
               <div className="flex flex-[1.2] flex-col gap-2.5">
                 <div className="flex items-center justify-between gap-3.5 rounded-xl border border-text/[.08] bg-surface-2 px-4.5 py-3.5">
                   <div className="min-w-0">

@@ -24,19 +24,19 @@ export function AlphabetExplorer() {
   }
 
   return (
-    <div className="mx-auto max-w-[1180px] px-8 py-[76px]">
+    <div className="mx-auto max-w-[1180px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-[76px]">
       <div className="mb-2.5 text-xs tracking-[0.16em] text-gold uppercase">Open classroom · No account needed</div>
-      <h2 className="m-0 mb-2 text-4xl font-extrabold tracking-[-0.01em]">Every letter has a home in the mouth.</h2>
-      <p className="mb-9 max-w-[560px] text-[16.5px] leading-[1.55] text-[#9FAAA3]">
+      <h2 className="m-0 mb-2 text-[28px] font-extrabold tracking-[-0.01em] sm:text-4xl">Every letter has a home in the mouth.</h2>
+      <p className="mb-9 max-w-[560px] text-[15px] leading-[1.55] text-[#9FAAA3] sm:text-[16.5px]">
         The 28 letters, each with its makhraj — the precise point it is born from. Tap any letter to meet it properly.
       </p>
-      <div className="flex items-start gap-7 max-lg:flex-col">
+      <div className="flex flex-col items-start gap-5 lg:flex-row lg:gap-7">
         <div
           ref={gridRef}
           dir="rtl"
           role="group"
           aria-label="The 28 Arabic letters — use arrow keys to move between letters"
-          className="grid flex-[1.05] grid-cols-7 gap-2 max-sm:grid-cols-4"
+          className="grid w-full flex-[1.05] grid-cols-4 gap-2 sm:grid-cols-7"
         >
           {ARABIC_LETTERS.map((l, i) => {
             const selected = i === letter;
@@ -68,8 +68,8 @@ export function AlphabetExplorer() {
           })}
         </div>
 
-        <div className="flex-1 rounded-[18px] border border-gold/[.22] bg-[#131D19] px-7 py-[26px]">
-          <div className="mb-3.5 flex items-center justify-between">
+        <div className="w-full flex-1 rounded-[18px] border border-gold/[.22] bg-[#131D19] px-5 py-5 sm:px-7 sm:py-[26px]">
+          <div className="mb-3.5 flex flex-wrap items-center justify-between gap-3">
             <div>
               <div className="text-2xl font-extrabold">
                 {selL.n} <span className="text-sm font-normal text-[#9FAAA3]">/{selL.t}/</span>

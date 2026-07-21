@@ -36,13 +36,13 @@ export function ProgressDashboard() {
         </div>
       </div>
 
-      <div className="mb-5 flex gap-5 max-lg:flex-col">
-        <div className="flex-[1.25] rounded-2xl border border-text/[.08] bg-surface-2 p-5.5">
-          <div className="mb-3.5 flex items-baseline justify-between">
+      <div className="mb-5 flex flex-col gap-5 lg:flex-row">
+        <div className="min-w-0 flex-[1.25] rounded-2xl border border-text/[.08] bg-surface-2 p-5.5">
+          <div className="mb-3.5 flex flex-wrap items-baseline justify-between gap-2">
             <div className="text-[14.5px] font-extrabold">Letter mastery — all 28</div>
             <div className="text-[11px] text-text-muted">amber = forming · green = settled</div>
           </div>
-          <div dir="rtl" className="grid grid-cols-7 gap-1.5 max-sm:grid-cols-4">
+          <div dir="rtl" className="grid grid-cols-4 gap-1.5 sm:grid-cols-7">
             {LETTERS_CH.map((ch, i) => {
               const v = LETTERS_MASTERY[i];
               const k = letterColor(v);
@@ -83,8 +83,8 @@ export function ProgressDashboard() {
             </div>
           </div>
 
-          <div className="flex items-center gap-4.5 rounded-2xl border border-text/[.08] bg-surface-2 p-5.5">
-            <svg width="264" height="153" viewBox="-52 0 294 170" role="img" aria-label="Skill radar: makharij 78, rules 64, fluency 55, breath 48, maqamat 20, memorization 60 percent">
+          <div className="flex flex-col items-center gap-4.5 rounded-2xl border border-text/[.08] bg-surface-2 p-5.5 xl:flex-row">
+            <svg width="264" height="153" viewBox="-52 0 294 170" className="h-auto w-full max-w-[264px] xl:w-[264px] xl:flex-none" role="img" aria-label="Skill radar: makharij 78, rules 64, fluency 55, breath 48, maqamat 20, memorization 60 percent">
               <g stroke="rgba(237,231,216,.1)" fill="none">
                 <polygon points="95,15 160,52 160,118 95,155 30,118 30,52" />
                 <polygon points="95,45 134,67 134,103 95,125 56,103 56,67" />
@@ -100,7 +100,7 @@ export function ProgressDashboard() {
                 <text x="24" y="50" textAnchor="end">Memorization</text>
               </g>
             </svg>
-            <div className="min-w-0 text-[12.5px] leading-[1.7] text-text-muted">
+            <div className="min-w-0 flex-1 break-words text-[12.5px] leading-[1.7] text-text-muted">
               Strongest: <span className="text-teal-hover">makharij</span>.<br />
               Growing: rules, memorization.<br />
               Awaiting you: <span className="text-gold-bright">maqamat</span> — opens at Stage 3.
@@ -109,7 +109,7 @@ export function ProgressDashboard() {
         </div>
       </div>
 
-      <div className="mb-5 flex gap-5 max-lg:flex-col">
+      <div className="mb-5 flex flex-col gap-5 lg:flex-row">
         <div className="flex-1 rounded-2xl border border-text/[.08] bg-surface-2 p-5.5">
           <div className="mb-3 text-[14.5px] font-extrabold">Practice — last 12 weeks</div>
           <div className="flex gap-[3px]">
@@ -127,9 +127,9 @@ export function ProgressDashboard() {
         </div>
 
         <div className="flex-[1.4] rounded-2xl border border-text/[.08] bg-surface-2 p-5.5">
-          <div className="mb-2.5 flex items-baseline gap-4">
+          <div className="mb-2.5 flex flex-wrap items-baseline gap-x-4 gap-y-1.5">
             <div className="text-[14.5px] font-extrabold">Trends</div>
-            <div className="flex gap-3.5 text-[11px]">
+            <div className="flex flex-wrap gap-x-3.5 gap-y-1 text-[11px]">
               <span className="text-teal">— accuracy</span>
               <span className="text-gold-bright">— fluency rate</span>
               <span style={{ color: "#9D8CE0" }}>— phrase length</span>
@@ -150,7 +150,7 @@ export function ProgressDashboard() {
       </div>
 
       <div className="rounded-2xl border border-gold/20 bg-surface-2 p-5.5">
-        <div className="mb-2 flex items-baseline justify-between">
+        <div className="mb-2 flex flex-wrap items-baseline justify-between gap-2">
           <div className="text-[14.5px] font-extrabold">Your journey — the road of the reciters</div>
           <div className="text-[11.5px] text-text-muted">stations are milestones, confirmed by your teacher&apos;s ear</div>
         </div>

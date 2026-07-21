@@ -8,7 +8,7 @@ export function ParentSignupForm() {
   const [consent, setConsent] = useState(false);
 
   return (
-    <div className="rounded-2xl border border-[#A8853E]/30 bg-[#F6F1E5] p-7.5 text-[#20241F]">
+    <div className="rounded-2xl border border-[#A8853E]/30 bg-[#F6F1E5] p-5 text-[#20241F] sm:p-7.5">
       <div className="mb-2 text-[10.5px] tracking-[0.13em] text-[#A8853E] uppercase">Family plan · step 2 of 3</div>
       <div className="mb-1 text-[19px] font-extrabold">Create Yusuf&apos;s account.</div>
       <div className="mb-4.5 text-[13px] leading-[1.55] text-[#5A6159]">

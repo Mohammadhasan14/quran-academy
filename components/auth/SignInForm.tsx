@@ -10,7 +10,7 @@ export function SignInForm() {
 
   if (stage === "code") {
     return (
-      <div className="rounded-2xl border border-[#A8853E]/30 bg-[#F6F1E5] p-7.5 text-[#20241F]">
+      <div className="rounded-2xl border border-[#A8853E]/30 bg-[#F6F1E5] p-5 text-[#20241F] sm:p-7.5">
         <div className="mb-1 text-[19px] font-extrabold">Check your email.</div>
         <div className="mb-4.5 text-[13px] text-[#5A6159]">
           We sent a six-digit key to <strong>{email || "a•••@gmail.com"}</strong>. It works for 10 minutes.
@@ -49,7 +49,7 @@ export function SignInForm() {
   }
 
   return (
-    <div className="rounded-2xl border border-[#A8853E]/30 bg-[#F6F1E5] p-7.5 text-[#20241F]">
+    <div className="rounded-2xl border border-[#A8853E]/30 bg-[#F6F1E5] p-5 text-[#20241F] sm:p-7.5">
       <div className="mb-1 text-[21px] font-extrabold">Welcome back.</div>
       <div className="mb-5 text-[13px] text-[#5A6159]">No passwords — we email you a six-digit key.</div>
       <label htmlFor="email" className="mb-1.5 block text-[11.5px] font-bold text-[#5A6159]">

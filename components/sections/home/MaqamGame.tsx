@@ -32,15 +32,15 @@ export function MaqamGame() {
 
   return (
     <div className="border-y border-[#EDE7D8]/[.06] bg-[#0D1512]">
-      <div className="mx-auto max-w-[1180px] px-8 py-[76px]">
+      <div className="mx-auto max-w-[1180px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-[76px]">
         <div className="mb-2.5 text-xs tracking-[0.16em] text-gold uppercase">Open classroom · The melodic modes</div>
-        <h2 className="m-0 mb-2 text-4xl font-extrabold tracking-[-0.01em]">Can you hear the maqam?</h2>
-        <p className="mb-8 max-w-[600px] text-[16.5px] leading-[1.55] text-[#9FAAA3]">
+        <h2 className="m-0 mb-2 text-[28px] font-extrabold tracking-[-0.01em] sm:text-4xl">Can you hear the maqam?</h2>
+        <p className="mb-8 max-w-[600px] text-[15px] leading-[1.55] text-[#9FAAA3] sm:text-[16.5px]">
           Two short recitations of the same verse, in two different melodic modes. Listen to both — no timer, no
           score — then trust your ear.
         </p>
 
-        <div className="mb-4.5 flex gap-5 max-md:flex-col">
+        <div className="mb-4.5 flex flex-col gap-5 md:flex-row">
           {(["A", "B"] as const).map((clip) => {
             const isA = clip === "A";
             const played = isA ? playedA : playedB;
@@ -49,7 +49,7 @@ export function MaqamGame() {
             return (
               <div
                 key={clip}
-                className="flex-1 rounded-2xl border bg-[#0A100E] px-6 py-[22px]"
+                className="flex-1 rounded-2xl border bg-[#0A100E] px-4 py-4 sm:px-6 sm:py-[22px]"
                 style={{
                   borderColor: revealed && correctHere ? "rgba(217,168,69,.6)" : "rgba(237,231,216,.12)",
                 }}
@@ -60,7 +60,7 @@ export function MaqamGame() {
                     {tag}
                   </div>
                 </div>
-                <div className="mb-3.5 flex items-center gap-3.5">
+                <div className="mb-3.5 flex flex-wrap items-center gap-3.5">
                   <button
                     onClick={() => (isA ? setPlayedA(true) : setPlayedB(true))}
                     aria-label={`Play clip ${clip}`}
@@ -98,7 +98,7 @@ export function MaqamGame() {
         </div>
 
         {revealed && (
-          <div className="rounded-2xl border border-[#D9A845]/40 bg-[#0A100E] px-[26px] py-6">
+          <div className="rounded-2xl border border-[#D9A845]/40 bg-[#0A100E] px-4 py-5 sm:px-[26px] sm:py-6">
             <div className="mb-3.5 text-[17px] font-extrabold text-[#EDE7D8]">
               {pick === mq.correct
                 ? `Your ear caught it — Clip ${mq.correct} is Bayati.`
@@ -123,13 +123,13 @@ export function MaqamGame() {
               <path d="M20,132 C70,116 110,130 170,112 S270,90 330,96 Q370,98 400,95 S520,84 620,98" fill="none" stroke="#D9A845" strokeWidth={2.5} />
               <path d="M20,112 C70,84 130,98 190,70 S310,44 380,58 S540,32 620,46" fill="none" stroke="#52B3A4" strokeWidth={2} />
             </svg>
-            <div className="my-3 flex gap-6 text-[12.5px] font-bold">
+            <div className="my-3 flex flex-col gap-2 text-[12.5px] font-bold sm:flex-row sm:flex-wrap sm:gap-6">
               <span className="flex items-center gap-1.5 text-[#D9A845]">
-                <span className="h-[3px] w-[18px] rounded-sm bg-[#D9A845]" />
+                <span className="h-[3px] w-[18px] flex-none rounded-sm bg-[#D9A845]" />
                 Clip {mq.correct} — Bayati, resting on the quarter-tone
               </span>
               <span className="flex items-center gap-1.5 text-teal">
-                <span className="h-0.5 w-[18px] rounded-sm bg-teal" />
+                <span className="h-0.5 w-[18px] flex-none rounded-sm bg-teal" />
                 Clip {otherClipLabel} — {mq.other}
               </span>
             </div>

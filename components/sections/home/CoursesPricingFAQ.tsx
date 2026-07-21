@@ -31,13 +31,13 @@ export function CoursesPricingFAQ() {
 
   return (
     <div id="courses" className="border-t border-[#20241F]/[.06] bg-[#F6F1E5] text-[#20241F]">
-      <div className="mx-auto max-w-[1180px] px-8 py-[76px]">
-        <h2 className="m-0 mb-2 text-4xl font-extrabold tracking-[-0.01em]">Begin with the flagship — free.</h2>
-        <p className="mb-8 max-w-[560px] text-[16.5px] leading-[1.55] text-[#5A6159]">
+      <div className="mx-auto max-w-[1180px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-[76px]">
+        <h2 className="m-0 mb-2 text-[28px] font-extrabold tracking-[-0.01em] sm:text-4xl">Begin with the flagship — free.</h2>
+        <p className="mb-8 max-w-[560px] text-[15px] leading-[1.55] text-[#5A6159] sm:text-[16.5px]">
           Structured courses with video lessons, drills, mastery checks, and live class access at the higher tiers.
         </p>
 
-        <div className="mb-16 grid grid-cols-3 gap-5 max-lg:grid-cols-1">
+        <div className="mb-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {COURSES.map((c) => (
             <div
               key={c.title}
@@ -59,21 +59,21 @@ export function CoursesPricingFAQ() {
           ))}
         </div>
 
-        <div className="mb-16 border-y border-[#A8853E]/45 px-6 py-9 text-center">
+        <div className="mb-16 border-y border-[#A8853E]/45 px-4 py-9 text-center sm:px-6">
           <div className="mb-2 text-[21px] font-extrabold">No one is turned away.</div>
           <div className="mx-auto mb-4.5 max-w-[560px] text-balance text-[15px] leading-[1.6] text-[#5A6159]">
             Our waqf fund covers students who cannot pay — funded by the community, for the community. Every
             Talaqqi seat sponsors a scholarship.
           </div>
-          <div className="flex justify-center gap-6.5 text-sm font-bold">
+          <div className="flex flex-wrap justify-center gap-x-6.5 gap-y-2 text-sm font-bold">
             <a href="#pricing" className="text-[#14655A]">Apply for a scholarship</a>
             <a href="#pricing" className="text-[#8B6A1F]">Give to the fund</a>
           </div>
         </div>
 
-        <div id="pricing" className="mb-6 flex items-baseline justify-between">
-          <h2 className="m-0 text-[30px] font-extrabold tracking-[-0.01em]">Honest pricing, no dark patterns.</h2>
-          <div className="flex items-center gap-3 text-[13px] text-[#8B8778]">
+        <div id="pricing" className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-baseline sm:justify-between">
+          <h2 className="m-0 text-[26px] font-extrabold tracking-[-0.01em] sm:text-[30px]">Honest pricing, no dark patterns.</h2>
+          <div className="flex flex-wrap items-center gap-3 text-[13px] text-[#8B8778]">
             <span>Regional pricing available · cancel anytime, in two taps</span>
             <select
               value={currency}
@@ -87,7 +87,7 @@ export function CoursesPricingFAQ() {
           </div>
         </div>
 
-        <div className="mb-5 grid grid-cols-4 gap-4 max-lg:grid-cols-2 max-sm:grid-cols-1">
+        <div className="mb-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <div className="rounded-2xl border border-[#20241F]/10 bg-[#FDFBF4] p-[22px]">
             <div className="text-[15px] font-extrabold">Free</div>
             <div className="my-2 text-[26px] font-extrabold">{free}</div>
@@ -133,7 +133,7 @@ export function CoursesPricingFAQ() {
           <strong className="text-[#8B6A1F]">free forever, for everyone</strong> — a waqf.
         </div>
 
-        <h2 className="m-0 mb-5 text-[30px] font-extrabold tracking-[-0.01em]">Questions, answered plainly.</h2>
+        <h2 className="m-0 mb-5 text-[26px] font-extrabold tracking-[-0.01em] sm:text-[30px]">Questions, answered plainly.</h2>
         <Accordion items={FAQS} />
       </div>
     </div>

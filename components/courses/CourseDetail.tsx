@@ -10,10 +10,10 @@ export function CourseDetail() {
 
   return (
     <div className="text-[#20241F]">
-      <div className="flex gap-8 bg-[#FDFBF4] px-9 py-8.5 max-md:flex-col" style={{ borderBottom: "1px solid rgba(32,36,31,.07)" }}>
+      <div className="flex flex-col gap-8 bg-[#FDFBF4] px-4 py-6 sm:px-6 md:flex-row md:px-9 md:py-8.5" style={{ borderBottom: "1px solid rgba(32,36,31,.07)" }}>
         <div className="min-w-0 flex-[1.2]">
           <div className="mb-2 text-[11px] tracking-[0.14em] text-[#A8853E] uppercase">Course · Tajweed path</div>
-          <h1 className="mb-2.5 text-[34px] font-extrabold tracking-[-0.01em]">Tajweed Foundations I</h1>
+          <h1 className="mb-2.5 text-[26px] font-extrabold tracking-[-0.01em] sm:text-[34px]">Tajweed Foundations I</h1>
           <div className="mb-4.5 text-balance text-[15px] leading-[1.6] text-[#5A6159]">
             Every core rule from makhraj to madd, taught in the five-step method — watch, hear, drill, produce,
             master. Your teacher&apos;s voice on every model recording.
@@ -40,7 +40,7 @@ export function CourseDetail() {
         </div>
       </div>
 
-      <div className="px-9 pt-7 pb-8.5">
+      <div className="px-4 pt-6 pb-8 sm:px-6 md:px-9 md:pt-7 md:pb-8.5">
         <div className="mb-3.5 text-[11px] tracking-[0.12em] text-[#8B8778] uppercase">Curriculum — five steps inside every lesson</div>
         <div className="mb-6.5 flex flex-col gap-2.5">
           {COURSE_MODULES.map((m, i) => (
@@ -68,7 +68,7 @@ export function CourseDetail() {
               {open === i && (
                 <div className="border-t border-[#20241f]/[.07] px-5 pb-3.5">
                   {m.lessons.map((ls) => (
-                    <div key={ls.name} className="flex items-center gap-3.5 border-b border-[#20241f]/5 py-2.5 last:border-0">
+                    <div key={ls.name} className="flex flex-wrap items-center gap-x-3.5 gap-y-1.5 border-b border-[#20241f]/5 py-2.5 last:border-0">
                       <div
                         className="flex h-[22px] w-[22px] flex-none items-center justify-center rounded-full border text-[10.5px] font-extrabold"
                         style={{
@@ -92,7 +92,7 @@ export function CourseDetail() {
                           <div key={si} className="h-[7px] w-[7px] rounded-sm" style={{ background: stepColor(s) }} />
                         ))}
                       </div>
-                      <div className="w-[120px] flex-none text-right text-[11.5px] text-[#8B8778]">{ls.note}</div>
+                      <div className="w-full flex-none pl-[34px] text-left text-[11.5px] text-[#8B8778] sm:w-[120px] sm:pl-0 sm:text-right">{ls.note}</div>
                     </div>
                   ))}
                 </div>

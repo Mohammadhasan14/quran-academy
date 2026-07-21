@@ -52,7 +52,7 @@ export function PracticeHub() {
           </button>
         </div>
 
-        <div className="mb-3.5 grid grid-cols-2 gap-2.5 max-sm:grid-cols-1">
+        <div className="mb-3.5 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
           {[
             { title: "Repeat after Qari", body: "Phrase-by-phrase echo practice" },
             { title: "Free practice", body: "Any passage, AI follows gently" },

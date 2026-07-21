@@ -107,7 +107,7 @@ export function MushafReader() {
       </div>
 
       <div className="flex-none border-t border-text/[.08] bg-surface-2 px-4 pt-2.5 pb-2">
-        <div className="mb-2.5 flex items-center justify-between">
+        <div className="mb-2.5 flex flex-wrap items-center justify-between gap-2">
           <div className="flex gap-0.5 rounded-[10px] bg-text/[.06] p-[3px]">
             <button
               onClick={() => setMode("reading")}

@@ -43,12 +43,12 @@ export function LessonPlayer() {
 
   return (
     <div className="flex min-h-screen flex-col bg-[#0A100E] text-[#EDE7D8]">
-      <div className="flex items-center justify-between border-b border-[#EDE7D8]/[.08] px-6 py-3.5">
-        <div className="text-[13px] text-[#9FAAA3]">
+      <div className="flex flex-wrap items-center justify-between gap-x-3.5 gap-y-2 border-b border-[#EDE7D8]/[.08] px-4 py-3.5 sm:px-6">
+        <div className="min-w-0 text-[13px] text-[#9FAAA3]">
           Tajweed Foundations I <span className="text-[#5F6B64]">/</span> Module 2{" "}
           <span className="text-[#5F6B64]">/</span> <span className="font-bold text-[#EDE7D8]">Lesson 4 — The Ghunnah</span>
         </div>
-        <div className="flex items-center gap-3.5">
+        <div className="flex flex-none items-center gap-3.5">
           <div className="text-xs text-[#9FAAA3]">Step {view + 1} of 5 · ~9 min left</div>
           <Link href="/courses" className="h-[34px] rounded-[9px] border border-[#EDE7D8]/[.14] px-3.5 text-[12.5px] font-bold text-[#9FAAA3] leading-[34px]">
             Exit lesson
@@ -56,19 +56,19 @@ export function LessonPlayer() {
         </div>
       </div>
 
-      <div className="flex flex-1 max-lg:flex-col">
-        <div className="min-w-0 flex-1 p-6 md:p-7">
+      <div className="flex flex-col flex-1 lg:flex-row">
+        <div className="min-w-0 flex-1 p-4 sm:p-6 md:p-7">
           {view === 0 && (
             <>
               <div className="relative overflow-hidden rounded-2xl border border-[#EDE7D8]/10">
-                <div className="h-[430px] w-full">
+                <div className="h-[220px] w-full sm:h-[320px] lg:h-[430px]">
                   <ImagePlaceholder label="Teacher video — Concept: the ghunnah (2:40, captioned)" />
                 </div>
                 <div className="absolute inset-x-0 bottom-0 px-4.5 pt-9 pb-3" style={{ background: "linear-gradient(transparent,rgba(10,16,14,.88))" }}>
                   <div className="mb-2.5 inline-block rounded-md bg-[#0A100E]/70 px-2.5 py-1 text-[13px] text-[#EDE7D8]">
                     …hold the hum for two counts — like a relaxed heartbeat.
                   </div>
-                  <div className="flex items-center gap-3.5">
+                  <div className="flex flex-wrap items-center gap-3.5">
                     <button aria-label="Play or pause" className="flex h-[38px] w-[38px] items-center justify-center rounded-full border border-gold/45 bg-gold/[.14] text-xs text-gold">❚❚</button>
                     <div className="relative h-1 flex-1 rounded-sm bg-[#EDE7D8]/15">
                       <div className="absolute inset-y-0 left-0 w-[64%] rounded-sm bg-[#2E8C7E]" />
@@ -79,7 +79,7 @@ export function LessonPlayer() {
                   </div>
                 </div>
               </div>
-              <div className="mt-4 flex gap-3 max-md:flex-col">
+              <div className="mt-4 flex flex-col gap-3 md:flex-row">
                 <div className="flex-1 rounded-[13px] border border-[#EDE7D8]/[.08] bg-[#0D1512] p-4.5">
                   <div className="mb-2 text-[11px] tracking-[0.12em] text-gold uppercase">Key points</div>
                   <div className="text-[13.5px] leading-[1.7] text-[#B9C2BB]">
@@ -100,10 +100,10 @@ export function LessonPlayer() {
           )}
 
           {view === 1 && (
-            <div className="rounded-2xl border border-[#EDE7D8]/10 bg-[#0D1512] px-7.5 py-6.5">
+            <div className="rounded-2xl border border-[#EDE7D8]/10 bg-[#0D1512] px-4 py-5 sm:px-7.5 sm:py-6.5">
               <div className="mb-1.5 text-[11px] tracking-[0.12em] text-gold uppercase">Interactive demo · worked example</div>
               <div className="mb-4 text-xl font-extrabold">Where the ghunnah lives</div>
-              <div className="flex gap-6 max-md:flex-col">
+              <div className="flex flex-col gap-6 md:flex-row">
                 <div className="min-h-[230px] flex-1 rounded-xl border border-[#EDE7D8]/[.08] bg-[repeating-linear-gradient(-45deg,#0A100E_0_10px,#0e1613_10px_20px)] p-4.5">
                   <div className="mb-3.5 font-mono text-[10.5px] text-[#9FAAA3]">
                     [ animated cross-section — soft palate lowers, air routes through the nose ]
@@ -137,13 +137,13 @@ export function LessonPlayer() {
           )}
 
           {view === 2 && (
-            <div className="rounded-2xl border border-[#EDE7D8]/10 bg-[#0D1512] px-7.5 py-6.5">
+            <div className="rounded-2xl border border-[#EDE7D8]/10 bg-[#0D1512] px-4 py-5 sm:px-7.5 sm:py-6.5">
               <div className="mb-1.5 text-[11px] tracking-[0.12em] text-gold uppercase">Listening drill · 2 of 3</div>
               <div className="mb-1 text-xl font-extrabold">Which ghunnah is held for its full two counts?</div>
               <div className="mb-5 text-[13.5px] text-[#9FAAA3]">
                 Both recite <span dir="rtl" className="font-arabic-quran text-[17px]">ثُمَّ</span> — listen for the length of the hum.
               </div>
-              <div className="mb-4 flex gap-4 max-md:flex-col">
+              <div className="mb-4 flex flex-col gap-4 md:flex-row">
                 {(["A", "B"] as const).map((c) => (
                   <div
                     key={c}
@@ -187,10 +187,10 @@ export function LessonPlayer() {
           )}
 
           {view === 3 && (
-            <div className="rounded-2xl border border-[#EDE7D8]/10 bg-[#0D1512] px-7.5 py-6.5 text-center">
+            <div className="rounded-2xl border border-[#EDE7D8]/10 bg-[#0D1512] px-4 py-5 sm:px-7.5 sm:py-6.5 text-center">
               <div className="mb-1.5 text-[11px] tracking-[0.12em] text-gold uppercase">Production drill · repeat after the teacher</div>
-              <div dir="rtl" className="font-arabic-quran pb-2 text-[52px] leading-[1.7] text-[#EDE7D8]">إِنَّ ٱللَّهَ مَعَ ٱلصَّـٰبِرِينَ</div>
-              <div className="my-2.5 mb-5.5 flex justify-center gap-2">
+              <div dir="rtl" className="font-arabic-quran pb-2 text-[34px] leading-[1.5] text-[#EDE7D8] sm:text-[52px] sm:leading-[1.7]">إِنَّ ٱللَّهَ مَعَ ٱلصَّـٰبِرِينَ</div>
+              <div className="my-2.5 mb-5.5 flex flex-wrap justify-center gap-2">
                 {["1 · Model plays", "2 · You recite", "3 · Hear yourself"].map((label, i) => (
                   <span
                     key={label}
@@ -205,7 +205,7 @@ export function LessonPlayer() {
                   </span>
                 ))}
               </div>
-              <div className="flex items-center justify-center gap-6.5">
+              <div className="flex items-center justify-center gap-4 sm:gap-6.5">
                 <button onClick={() => setPdPhase(0)} aria-label="Play the model" className="flex h-[58px] w-[58px] items-center justify-center rounded-full border border-teal/45 bg-teal/10 text-[15px] text-teal">▶</button>
                 <button
                   onClick={() => setPdPhase(1)}
@@ -222,7 +222,7 @@ export function LessonPlayer() {
                 <button onClick={() => setPdPhase(2)} aria-label="Replay your attempt" className="flex h-[58px] w-[58px] items-center justify-center rounded-full border border-[#EDE7D8]/[.16] text-sm text-[#EDE7D8]">↻</button>
               </div>
               <div aria-live="polite" className="mt-4 min-h-[20px] text-[13.5px] text-[#9FAAA3]">{pdMsg}</div>
-              <div className="mt-4.5 flex justify-center gap-3">
+              <div className="mt-4.5 flex flex-wrap justify-center gap-3">
                 <button className="h-[42px] rounded-[11px] border border-[#EDE7D8]/[.14] px-5 text-[13px] font-bold text-[#9FAAA3]">Again</button>
                 <button
                   onClick={() => goStep(4)}
@@ -277,7 +277,7 @@ export function LessonPlayer() {
                   <div className="ml-auto flex-none text-xs text-[#D99A3D]">1 question</div>
                 </div>
               </div>
-              <div className="flex gap-3">
+              <div className="flex flex-col gap-3 sm:flex-row">
                 <button
                   onClick={() => setOutcome("pass")}
                   className="h-[46px] rounded-xl border-none px-6 text-sm font-bold text-[#0A100E]"
@@ -293,7 +293,7 @@ export function LessonPlayer() {
           )}
         </div>
 
-        <div className="flex w-full flex-none flex-col gap-4.5 border-l border-[#EDE7D8]/[.08] p-6 lg:w-[330px]">
+        <div className="flex w-full flex-none flex-col gap-4.5 border-t border-[#EDE7D8]/[.08] p-4 sm:p-6 lg:w-[330px] lg:border-t-0 lg:border-l">
           <div>
             <div className="mb-3 text-[11px] tracking-[0.12em] text-[#9FAAA3] uppercase">Lesson steps — each unlocks the next</div>
             <div className="flex flex-col gap-1.5" role="list">

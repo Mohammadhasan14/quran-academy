@@ -30,7 +30,7 @@ export function AssignmentFlow() {
             <br />
             · Clean stops at each verse end
           </div>
-          <div className="flex justify-between border-t border-[#EDE7D8]/[.08] py-2.5 text-[12.5px] text-[#9FAAA3]">
+          <div className="flex flex-wrap justify-between gap-x-3 gap-y-1 border-t border-[#EDE7D8]/[.08] py-2.5 text-[12.5px] text-[#9FAAA3]">
             <span>Due Sunday night</span>
             <span>3 attempts allowed</span>
             <span>review ≤ 72h</span>

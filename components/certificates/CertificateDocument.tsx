@@ -1,7 +1,7 @@
 export function CertificateDocument() {
   return (
     <div className="rounded border-2 border-[#A8853E] p-1">
-      <div className="relative border border-[#A8853E]/50 bg-[#FDFBF4] px-9 py-8.5 text-center text-[#20241F]">
+      <div className="relative border border-[#A8853E]/50 bg-[#FDFBF4] px-5 py-6 text-center text-[#20241F] sm:px-9 sm:py-8.5">
         <div className="absolute top-2.5 left-2.5 h-[9px] w-[9px] rotate-45 bg-[#A8853E]" />
         <div className="absolute top-2.5 right-2.5 h-[9px] w-[9px] rotate-45 bg-[#A8853E]" />
         <div className="absolute bottom-2.5 left-2.5 h-[9px] w-[9px] rotate-45 bg-[#A8853E]" />
@@ -21,10 +21,10 @@ export function CertificateDocument() {
           has completed <strong>Tajweed Foundations I</strong> and demonstrated its rules in live recitation,
           examined and confirmed by the ear of her teacher.
         </div>
-        <div className="mt-6.5 flex items-end justify-between text-left">
-          <div>
+        <div className="mt-6.5 flex flex-wrap items-end justify-between gap-4 text-left">
+          <div className="min-w-0">
             <div className="font-arabic-ui -rotate-2 text-xl">[TEACHER SIGNATURE]</div>
-            <div className="mt-1 mb-1 h-px w-[150px] bg-[#20241F]/30" />
+            <div className="mt-1 mb-1 h-px w-full max-w-[150px] bg-[#20241F]/30" />
             <div className="text-[10.5px] text-[#8B8778]">[TEACHER NAME] · Qari of the academy</div>
             <div className="text-[10.5px] text-[#8B8778]">18 July 2026 · Certificate № TF1-0482</div>
           </div>

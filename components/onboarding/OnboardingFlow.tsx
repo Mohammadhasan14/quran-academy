@@ -153,7 +153,7 @@ export function OnboardingFlow() {
             <div className="mb-1 text-center text-2xl font-extrabold">Your recitation, today.</div>
             <div className="mb-3 text-center text-[13px] text-text-muted">Not a grade — a starting point.</div>
             <div className="flex flex-1 items-center justify-center">
-              <svg width="294" height="170" viewBox="-52 0 294 170" role="img" aria-label="Your skill fingerprint drawing itself" style={{ animation: "rw-radar .9s cubic-bezier(.32,0,.16,1) both" }}>
+              <svg width="294" height="170" viewBox="-52 0 294 170" className="h-auto w-full max-w-[294px]" role="img" aria-label="Your skill fingerprint drawing itself" style={{ animation: "rw-radar .9s cubic-bezier(.32,0,.16,1) both" }}>
                 <g stroke="rgba(237,231,216,.1)" fill="none">
                   <polygon points="95,15 160,52 160,118 95,155 30,118 30,52" />
                   <polygon points="95,45 134,67 134,103 95,125 56,103 56,67" />

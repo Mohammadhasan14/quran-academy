@@ -29,15 +29,15 @@ export function VerseDemonstration() {
   }
 
   return (
-    <div className="mx-auto max-w-[1180px] px-8 py-[76px]">
+    <div className="mx-auto max-w-[1180px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-[76px]">
       <div className="mb-2.5 text-xs tracking-[0.16em] text-gold uppercase">The method, on one verse</div>
-      <h2 className="m-0 mb-2 text-4xl font-extrabold tracking-[-0.01em]">Watch a verse being taught.</h2>
-      <p className="mb-8 max-w-[560px] text-[16.5px] leading-[1.55] text-[#9FAAA3]">
+      <h2 className="m-0 mb-2 text-[28px] font-extrabold tracking-[-0.01em] sm:text-4xl">Watch a verse being taught.</h2>
+      <p className="mb-8 max-w-[560px] text-[15px] leading-[1.55] text-[#9FAAA3] sm:text-[16.5px]">
         Surah Al-Ikhlas, first ayah. Press play: each word lights with the audio, and the teaching appears at the
         exact moment it applies.
       </p>
-      <div className="rounded-[20px] border border-gold/[.22] bg-[#0D1512] px-10 pt-10 pb-[30px]">
-        <div dir="rtl" className="font-arabic-quran text-center text-[46px] leading-[1.9] text-[#EDE7D8]">
+      <div className="rounded-[20px] border border-gold/[.22] bg-[#0D1512] px-5 pt-7 pb-6 sm:px-10 sm:pt-10 sm:pb-[30px]">
+        <div dir="rtl" className="font-arabic-quran text-center text-3xl leading-[1.7] text-[#EDE7D8] sm:text-[46px] sm:leading-[1.9]">
           {VERSE_WORDS.map((w, i) => (
             <span
               key={i}

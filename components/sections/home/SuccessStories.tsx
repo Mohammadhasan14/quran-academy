@@ -23,13 +23,13 @@ export function SuccessStories() {
 
   return (
     <div className="border-t border-[#20241F]/[.06] bg-[#EEE7D6] text-[#20241F]">
-      <div className="mx-auto max-w-[1180px] px-8 py-[76px]">
+      <div className="mx-auto max-w-[1180px] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-[76px]">
         <div className="mb-2.5 text-xs tracking-[0.16em] text-[#A8853E] uppercase">Real students, five weeks apart</div>
-        <h2 className="m-0 mb-2 text-4xl font-extrabold tracking-[-0.01em]">Hear the change — don&apos;t take our word.</h2>
-        <p className="mb-8 max-w-[560px] text-[16.5px] leading-[1.55] text-[#5A6159]">
+        <h2 className="m-0 mb-2 text-[28px] font-extrabold tracking-[-0.01em] sm:text-4xl">Hear the change — don&apos;t take our word.</h2>
+        <p className="mb-8 max-w-[560px] text-[15px] leading-[1.55] text-[#5A6159] sm:text-[16.5px]">
           The same student, the same short passage. Tap between Week 1 and Week 6 while it plays.
         </p>
-        <div className="grid grid-cols-3 gap-5 max-lg:grid-cols-1">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {SUCCESS_STORIES.map((story, i) => {
             const s = states[i];
             const isW1 = s.ab === 0;
